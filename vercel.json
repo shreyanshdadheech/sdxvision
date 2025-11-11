@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "src": "/robots.txt",
+      "dest": "/robots_plain.txt",
+      "headers": {
+        "Content-Type": "text/plain"
+      }
+    }
+  ]
+}

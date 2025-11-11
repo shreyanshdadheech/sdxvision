@@ -1,4 +1,61 @@
+# =======================================
+# SDX VISION — SEO + AI Crawl Configuration (Valid 2025)
+# https://sdx.vision
+# =======================================
+
 User-agent: *
 Allow: /
 
+# Block system & duplicate technical pages
+Disallow: /cdn-cgi/
+Disallow: /project-index
+Disallow: /index.html$
+Disallow: /draft/
+Disallow: /temp/
+Disallow: /test/
+
+# Allow key public pages
+Allow: /about
+Allow: /services
+Allow: /get-in-touch
+Allow: /privacy-policy
+Allow: /project-clubicles
+Allow: /codesnippify
+Allow: /hammurabi
+
+# =======================================
+# AI CRAWLER SETTINGS — Allow AI search & training access
+# =======================================
+
+# Google AI (Search Generative Experience & Gemini)
+User-agent: Google-Extended
+Allow: /
+
+# Bing AI (Microsoft Copilot, Chat)
+User-agent: Bingbot
+Allow: /
+User-agent: BingPreview
+Allow: /
+
+# OpenAI ChatGPT (for browsing & AI search)
+User-agent: GPTBot
+Allow: /
+
+# Anthropic Claude AI
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Common AI dataset scrapers — BLOCK
+User-agent: CCBot
+Disallow: /
+User-agent: FacebookBot
+Disallow: /
+
+# =======================================
+# Sitemap & Crawl Index Reference
+# =======================================
 Sitemap: https://sdx.vision/sitemap.xml
